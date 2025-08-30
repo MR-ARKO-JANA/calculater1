@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+
+  <div id="tag"></div>
+
+  <div class="calculator">
+    <button onclick="TURNon()" class="go">on</button>
+    <button onclick="TURNOFF()" class="go">OFF</button>
+    <h4 class="tag">BY ARKO</h5>
+      <div id="display">OFF</div>
+      <button onclick="appendValue('/')">/</button>
+      <button onclick="appendValue('*')">*</button>
+      <button onclick="appendValue('-')">-</button>
+      <button onclick="appendValue('+')">+</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="cleardisplay()" id="clear">c</button>
+      <button id="enter" onclick="start()">ENTER</button>
+
+  </div>
+  </div>
+  <script>
+    let display = document.getElementById("display")
+    let input = ""
+    let ison = false
+    let off = false
+    function appendValue(value) {
+      if (!ison) { return; }
+      input = input + value
+      display.innerText = input
+
+    }
+    function cleardisplay() {
+
+      input = ""
+      display.innerText = input
+    }
+    function TURNon() {
+      ison = true
+      input = ""
+      display.innerText = "0"
+    }
+    function TURNOFF() {
+      ison = false
+      input = ""
+      display.innerText = "OFF"
+    }
+    
+    function start() {
+      if(!ison){return;}
+      try{
+        let result=eval(input)
+        display.innerText=result
+      }
+      catch(er){
+        display.innerText = "Error";
+        input = "";
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

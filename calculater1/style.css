@@ -1,0 +1,91 @@
+.first{
+       color: rgb(14, 15, 15);
+       background-color: rgb(213, 64, 64);
+       width: 100px;
+       height: 250px;
+}
+
+.second{
+    background-color: rgb(10, 10, 10);
+    color: rgb(255, 250, 250);
+    width: 100px;
+       height: 50px;
+    
+}
+ #divided{
+   width:10px;
+}
+
+
+  body {
+    background: #1f1f2e;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    
+  }
+
+  .tag{
+    background-color: #313333;
+    border-radius: 10px;
+    ;
+  }
+
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    background: #060607;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(194, 184, 184, 0.5);
+   
+  }
+
+   #display {
+    grid-column: span 4;
+    background: #161622;
+    color: #00ffe7;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: right;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+  }
+
+  button {
+    height: 60px;
+    border: nne;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(145deg, #3c3c55, #2c2c45);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
+
+  button:hover {
+    background: #444466;
+    transform: scale(1.05);
+  }
+
+  #enter {
+    grid-column: span 4;
+    background: #00ff99;
+    color: black;
+    font-weight: bOld;
+  }
+
+  #enter:hover {
+    background: #00cc88;
+  }
+
+  .go{
+height: 20px;
+width: 30px;
+font-size: 10px;
+text-align: center;
+ align-items: right;
+  
+}
+
